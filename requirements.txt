@@ -1,2 +1,4 @@
 tensorflow-cpu
 tensorflow
+numpy
+torch
