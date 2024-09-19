@@ -15,15 +15,15 @@ document.querySelector("#BtnCalculate").addEventListener("click", () => {
         alert("Input the British Columbia or Ontario at Province of residence column")
     
     // Declare Parameter
-    let on_peak_hours = document.getElementById("InOnPeak").value;
-    let off_peak_hours = document.getElementById("InOffPeak").value;
-    let on_peak_usage = parseFloat((on_peak_hours * on_peak_fee).toFixed(2));
-    let off_peak_usage = parseFloat((off_peak_hours * off_peak_fee).toFixed(2));
+    const on_peak_hours = document.getElementById("InOnPeak").value;
+    const off_peak_hours = document.getElementById("InOffPeak").value;
+    const on_peak_usage = parseFloat((on_peak_hours * on_peak_fee).toFixed(2));
+    const off_peak_usage = parseFloat((off_peak_hours * off_peak_fee).toFixed(2));
 
-    let total_con_charge = parseFloat((on_peak_usage + off_peak_usage).toFixed(2));
-    let sales_tax = parseFloat((total_con_charge * HST).toFixed(2));
-    let rebate = document.getElementById("InProvince").value == "British Columbia" ? parseFloat((total_con_charge * BC_rebate).toFixed(2)) : 0;
-    let final_total = parseFloat((total_con_charge + sales_tax - rebate).toFixed(2));
+    const total_con_charge = parseFloat((on_peak_usage + off_peak_usage).toFixed(2));
+    const sales_tax = parseFloat((total_con_charge * HST).toFixed(2));
+    const rebate = document.getElementById("InProvince").value == "British Columbia" ? parseFloat((total_con_charge * BC_rebate).toFixed(2)) : 0;
+    const final_total = parseFloat((total_con_charge + sales_tax - rebate).toFixed(2));
 
     // Output to console
     console.log("On Peak Charges: $"+on_peak_usage);
